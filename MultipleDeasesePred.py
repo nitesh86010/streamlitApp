@@ -11,9 +11,9 @@ import numpy as np
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-diabeties = pickle.load(open('C:/Users/NITESH MAURYA/OneDrive/Documents/project/multipleBimariPrediction/DiabetesModel.sav', 'rb'))
-heart = pickle.load(open('C:/Users/NITESH MAURYA/OneDrive/Documents/project/multipleBimariPrediction/HeartDeaseas.sav','rb'))
-parking = pickle.load(open('C:/Users/NITESH MAURYA/OneDrive/Documents/project/multipleBimariPrediction/parkingSons.sav','rb'))
+diabeties = pickle.load(open('DiabetesModel.sav', 'rb'))
+heart = pickle.load(open('HeartDeaseas.sav','rb'))
+parking = pickle.load(open('parkingSons.sav','rb'))
 
 #sideBar Navigation
 
@@ -29,8 +29,8 @@ with st.sidebar:
         "nav-link-selected": {"background-color": "#02ab21"},
    }
                            )
-logo = Image.open(r'C:/Users/NITESH MAURYA/OneDrive/Documents/project/multipleBimariPrediction/logo.png')
-profile = Image.open(r'C:/Users/NITESH MAURYA/OneDrive/Documents/project/multipleBimariPrediction/health.jpg')
+logo = Image.open(r'logo.png')
+profile = Image.open(r'health.jpg')
 #Diabetes PRediction
 if selected=="Home":
     col1, col2 = st.columns( [0.8, 0.2])
@@ -48,12 +48,12 @@ if selected=="Home":
     
 def diabetesSoltutions():
     st.write("<h3>Manage Your Diabetes for Life</h3>", unsafe_allow_html = True)
-    dontWorry = Image.open(r'C:/Users/NITESH MAURYA/OneDrive/Documents/project/multipleBimariPrediction/dontWorry.jpg')
+    dontWorry = Image.open(r'dontWorry.jpg')
     st.image(dontWorry,width=700)
     st.write("<p>It is common to feel overwhelmed, sad, or angry when you are living with diabetes. You may know the steps you should take to stay healthy, but have trouble sticking with your plan over time. This section has tips on how to cope with your diabetes, eat well, and be active.</p>",unsafe_allow_html=True)
     st.write("<h5>Cope with your diabetes.</h5><br><p><b>1.</b> Stress can raise your blood sugar. Learn ways to lower your stress. Try deep breathing, gardening, taking a walk, meditating, working on your hobby, or listening to your favorite music.</p>",unsafe_allow_html=True)
     st.write("<p><b>2.</b>Ask for help if you feel down. A mental health counselor, support group, member of the clergy, friend, or family member who will listen to your concerns may help you feel better.</p><br><h5>Eat well.</h5>",unsafe_allow_html = True)
-    khana  = Image.open(r'C:/Users/NITESH MAURYA/OneDrive/Documents/project/multipleBimariPrediction/diaThali.png')
+    khana  = Image.open(r'diaThali.png')
     st.image(khana,width=550)
     st.write("<p> Make a diabetes meal plan with help from your health care team. Choose foods that are lower in calories, saturated fat, trans fat, sugar, and salt. Eat foods with more fiber, such as whole grain cereals, breads, crackers, rice, or pasta.Choose foods such as fruits, vegetables, whole grains, bread and cereals, and low-fat or skim milk and cheese. Drink water instead of juice and regular soda. When eating a meal, fill half of your plate with fruits and vegetables, one quarter with a lean protein, such as beans, or chicken or turkey without the skin, and one quarter with a whole grain, such as brown rice or whole wheat pasta.",unsafe_allow_html=True)
     st.write("<h5>Be active.</h5>",unsafe_allow_html = True)
@@ -66,27 +66,27 @@ def diabetesSoltutions():
 def healthyDia():
     st.write("<b>Yeah It is very good news but don't be lazy in your daily life. Follow these tips to avoid diabetes in future</b>",unsafe_allow_html=True)
     st.write("<h3>Lose extra weight</h3>",unsafe_allow_html =True)
-    weight = Image.open(r'C:/Users/NITESH MAURYA/OneDrive/Documents/project/multipleBimariPrediction/extraWeight.jfif')
+    weight = Image.open(r'extraWeight.jfif')
     st.image(weight,width=700)
     st.write("<p>Losing weight reduces the risk of diabetes. People in one large study reduced their risk of developing diabetes by almost 60% after losing approximately 7% of their body weight with changes in exercise and diet. The American Diabetes Association recommends that people with prediabetes lose at least 7% to 10% of their body weight to prevent disease progression. More weight loss will translate into even greater benefits. Set a weight-loss goal based on your current body weight. Talk to your doctor about reasonable short-term goals and expectations, such as a losing 1 to 2 pounds a week.</p>",unsafe_allow_html=True)
     st.write("<h3>Following a healthy eating plan</h3>",unsafe_allow_html = True)
-    eating = Image.open(r'C:/Users/NITESH MAURYA/OneDrive/Documents/project/multipleBimariPrediction/healthyEating.jpg')
+    eating = Image.open(r'healthyEating.jpg')
     st.image(eating,width=700)
     st.write("<p> It is important to reduce the amount of calories you eat and drink each day, so you can lose weight and keep it off. To do that, your diet should include smaller portions and less fat and sugar. You should also eat a variety of foods from each food group, including plenty of whole grains, fruits, and vegetables. It's also a good idea to limit red meat, and avoid processed meats</p>",unsafe_allow_html=True)
     st.write("<h3>Get regular exercise</h3>",unsafe_allow_html=True)
-    exercise = Image.open(r'C:/Users/NITESH MAURYA/OneDrive/Documents/project/multipleBimariPrediction/exersize.jfif')
+    exercise = Image.open(r'exersize.jfif')
     st.image(exercise,width=700)
     st.write("<p>Exercise has many health benefits, including helping you to lose weight and lower your blood sugar levels. These both lower your risk of type 2 diabetes. Try to get at least 30 minutes of physical activity 5 days a week. If you have not been active, talk with your health care professional to figure out which types of exercise are best for you. You can start slowly and work up to your goa</p>",unsafe_allow_html=True)
     st.write("<h3>Don't smoke</h3>",unsafe_allow_html=True)
-    smoke = Image.open(r'C:/Users/NITESH MAURYA/OneDrive/Documents/project/multipleBimariPrediction/smoke.jfif')
+    smoke = Image.open(r'smoke.jfif')
     st.image(smoke,width=700)
     st.write("<p>Smoking can contribute to insulin resistance, which can lead to type 2 diabetes. If you already smoke, try to quit.</p>",unsafe_allow_html=True)
     st.write("<h3>Talk to your health care provider </h3>",unsafe_allow_html=True)
-    doctor = Image.open(r'C:/Users/NITESH MAURYA/OneDrive/Documents/project/multipleBimariPrediction/doctorPhoto.jfif')
+    doctor = Image.open(r'doctorPhoto.jfif')
     st.image(doctor,width=700)
     st.write("<p>Talk to your health care provider to see whether there is anything else you can do to delay or to prevent type 2 diabetes. If you are at high risk, your provider may suggest that you take one of a few types of diabetes medicines</p>",unsafe_allow_html=True)
     st.write("<h3>Light to moderate alcohol consumption</h3>",unsafe_allow_html=True)
-    alcohol = Image.open(r'C:/Users/NITESH MAURYA/OneDrive/Documents/project/multipleBimariPrediction/alcohol.jfif')
+    alcohol = Image.open(r'alcohol.jfif')
     st.image(alcohol,width=700)
     st.write("<p>Evidence has consistently linked moderate alcohol consumption with reduced risk of heart disease. The same may be true for type 2 diabetes. Moderate amounts of alcohol—up to a drink a day for women, up to two drinks a day for men—increases the efficiency of insulin at getting glucose inside cells. And some studies indicate that moderate alcohol consumption decreases the risk of type 2 diabetes. [1, 34-39], but excess alcohol intake actually increases the risk. If you already drink alcohol, the key is to keep your consumption in the moderate range, as higher amounts of alcohol could increase diabetes risk. [40] If you don’t drink alcohol, there’s no need to start—you can get the same benefits by losing weight, exercising more, and changing your eating patterns</p>",unsafe_allow_html=True)
     
